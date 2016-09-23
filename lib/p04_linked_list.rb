@@ -52,12 +52,14 @@ class LinkedList
     found_link = find(key)
     unless found_link == @stop
       found_link.val = val
+      found_link
     else
       node = Link.new(key, val)
       last.next = node
       node.prev = last
       node.next = @stop
       @stop.prev = node
+      node
     end
   end
 

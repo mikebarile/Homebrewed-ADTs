@@ -63,8 +63,4 @@ class HashMap
     end
     @store = new_store
   end
-
-  def bucket(key)
-    # optional but useful; return the bucket corresponding to `key`
-  end
 end
