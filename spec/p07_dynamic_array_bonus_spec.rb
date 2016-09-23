@@ -221,10 +221,10 @@ describe DynamicArray do
       5.times { arr.shift }
 
       (1..100).each { |n| arr.push(n) }
-      expect(arr[-6]).to eq(95)
+      p expect(arr[-6]).to eq(95)
 
       arr[-1] = 200
-      expect(arr[99]).to eq(200)
+      p expect(arr[99]).to eq(200)
     end
   end
 
