@@ -24,8 +24,8 @@ describe LinkedList do
     end
   end
 
-  describe "#insert" do 
-    it "inserts links" do 
+  describe "#insert" do
+    it "inserts links" do
       empty_list.insert(:first, 1)
       expect(empty_list.empty?).to be false
     end
@@ -83,6 +83,10 @@ describe LinkedList do
       expect(list_vals_yielded).to eq(list_vals_ordered)
     end
 
+    it "includes Enumerable module" do
+      expect(list.class.ancestors).to include(Enumerable)
+    end
+
   describe "#[]" do
     it "can look up links by index" do
       expect(list[0].key).to eq(:first)
@@ -91,8 +95,6 @@ describe LinkedList do
     end
   end
 
-    it "includes Enumerable module" do
-      expect(list.class.ancestors).to include(Enumerable)
-    end
+
   end
 end
